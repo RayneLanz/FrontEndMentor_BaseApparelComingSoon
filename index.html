@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page | RayneLanz</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  
+  <div class="main">
+    
+    <div class="left">
+      
+
+      <div class="wrapper">
+        <img src="./images/logo.svg" alt="logo" class="DesktopLogo">
+        <h1><span>We're</span><br> coming <br>soon</h1>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+
+        <form>
+          
+            <input type="email" id="email" required>
+            
+            <button type="button" onclick="check()"><img src="./images/icon-error.svg" alt="error" class="errorLogo"><img src="./images/icon-arrow.svg" alt="arrow"></button>
+            <label for="email" class="error">Please provide a valid email</label>
+            
+
+          
+        </form>
+
+      </div>
+
+    </div>
+
+    <div class="right">
+
+    </div>
+    <img src="./images/logo.svg" alt="logo" class="MobileopLogo">
+  </div>
+
+
+
+  
+
+
+  <!-- We're coming soon
+
+  Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals.
+    <div class="left">
+      
+
+      <h1 class="title1">WE'RE</h1>
+      <h1 class="title2">coming <br> soon</h1>
+
+
+
+    </div>
+
+    <div class="right">
+      a
+
+    </div>
+  Email Address -->
+  
+<script>
+  const errorMessage = document.querySelector('.error')
+  const errorLogo = document.querySelector('.errorLogo') 
+  const inputEmail = document.querySelector('#email')
+  function hide(){
+    errorMessage.style.display = "none";
+    errorLogo.style.display = "none";
+  }
+  function check(){
+    if (!inputEmail.checkValidity()) {
+      // Prevent the form from submitting if the email input is invalid
+      event.preventDefault();
+      errorMessage.style.display = "block";
+      errorLogo.style.display = "block";
+
+      setTimeout(hide, 2000);
+
+    }
+
+  }
+
+</script>
+
+</body>
+</html>
